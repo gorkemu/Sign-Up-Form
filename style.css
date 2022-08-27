@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+@font-face {
+    font-family: norse-bold;
+    src: url("fonts/Norse-Bold.otf") format("opentype");
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+}
+
+.left-side {
+    flex: 1;
+    background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1862&q=80);
+    background-size: cover;
+    background-color: #476130;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.right-side {
+    width: 65%;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.left-side span {
+    color: #fff;
+    position: absolute;
+    bottom: 2%;
+    font-size: 14px;
+}
+
+.form-top {
+    padding: 90px 250px 10px 30px;
+}
+
+.form-top>p {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.logo-area>p {
+    font-family: norse-bold;
+    font-size: 90px;
+    color: #fff;
+}
+
+.logo-area {
+    height: 140px;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(6, 6, 8, 0.401);
+    position: absolute;
+    top: 19%;
+}
+
+.logo-area>img {
+    height: 80%;
+}
+
+.form-middle {
+    padding: 20px 0px 50px 50px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    background-color: #fff;
+}
+
+.form-bottom {
+    padding: 30px 0px 30px 50px;
+}
+
+.form-middle>p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+input[type=text], input[type=password], input[type=tel], input[type=email] {
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 8px;
+    border: 2px solid #E5E7EB;
+    border-radius: 5px;
+    display: block;
+    width: 280px;
+    height: 36px;
+}
+
+.card {
+    min-width: 350px;
+    height: 60px;
+}
+
+/* .card > span {
+    height: 20px;
+} */
+label {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: dimgray
+}
+
+.form-bottom a {
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
+}
+
+button {
+    background-color: #596D48;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 40px;
+    border-radius: 10px;
+    width: 220px;
+    margin-bottom: 28px;
+}
+
+.bottom p {
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #476130;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
