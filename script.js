@@ -3,57 +3,43 @@ const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirm-password');
 const message = document.getElementById('message');
 
-let isTriggered = false;
+let isPasswordRed = false;
+let isConfirmPasswordRed = false;
 
 form.addEventListener('submit', e => {
 
   if (passwordInput.value !== confirmPasswordInput.value) {
     e.preventDefault();
-    confirmPasswordInput.style.border = '2px solid red';
     passwordInput.style.border = '2px solid red';
-    message.style.color = 'red';
+    confirmPasswordInput.style.border = '2px solid red';
     message.textContent = '* Passwords do not match';
-    message.style.fontSize = '10px';
+    isPasswordRed = true;
+    isConfirmPasswordRed = true;
   }
 });
 
 passwordInput.addEventListener('focusout', e => {
-
   if (passwordInput.value.length < 6 && passwordInput.value !== '') {
     passwordInput.style.border = '2px solid red';
-    message.style.color = 'red';
     message.textContent = '* Password must contain at least 6 characters';
-    message.style.fontSize = '10px';
+    isPasswordRed = true;
   }
-  isTriggered = true;
+  else {
+    passwordInput.style.border = '2px solid #E5E7EB';
+    isPasswordRed = false;
+  }
 });
 
 passwordInput.addEventListener('focus', e => {
-
-  if (isTriggered = true) {
-    passwordInput.style.border = '2px solid #E5E7EB';
-    message.textContent = '';
-  }
-  isTriggered = false;
-  }
-);
+  message.textContent = '';
+  passwordInput.style.border = '2px solid #0000ff';
+});
 
 confirmPasswordInput.addEventListener('focus', e => {
+  confirmPasswordInput.style.border = '2px solid #0000ff';
+});
 
-  if (isTriggered = true && passwordInput.value.length >= 6) {
-    passwordInput.style.border = '2px solid #E5E7EB';
-    message.textContent = '';
-  }
-  isTriggered = false;
-  }
-);
-
-confirmPasswordInput.addEventListener('keyup', e => {
-
-  if (passwordInput.value === confirmPasswordInput.value) {
+confirmPasswordInput.addEventListener('focusout', e => {
     confirmPasswordInput.style.border = '2px solid #E5E7EB';
-    message.textContent = '';
-  }
-  isTriggered = false;
-  }
-);
+    isConfirmPasswordRed = false;
+});
