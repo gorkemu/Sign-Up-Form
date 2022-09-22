@@ -1,21 +1,25 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
-html, body {
-    height: 100%;
-}
 @font-face {
     font-family: norse-bold;
     src: url("fonts/Norse-Bold.otf") format("opentype");
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
 }
-
 
 .container {
     height: 100%;
@@ -123,9 +127,6 @@ input[type=text], input[type=password], input[type=tel], input[type=email] {
     height: 60px;
 }
 
-/* .card > span {
-    height: 20px;
-} */
 label {
     text-transform: uppercase;
     font-size: 14px;
@@ -160,8 +161,13 @@ button:hover {
 }
 
 input:focus {
-    border: 2px solid blue;
+    border: 2px solid #0000ff;
     outline: none;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
+
+#message {
+    color: red;
+    font-size: 10px;
 }
 
